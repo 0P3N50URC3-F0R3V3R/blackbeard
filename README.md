@@ -1,5 +1,5 @@
-# Black Beard an Open source project for the game DEEP ROCK GALACTIC 
-# DEEPDIVE AND ASSIGNMENT EMULATOR
+# Black Beard 
+# DEEP ROCK GALACTIC - DEEPDIVE AND ASSIGNMENT EMULATOR
 
 # Currently Supported platform: Windows only.
 
