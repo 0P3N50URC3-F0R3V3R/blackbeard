@@ -27,7 +27,7 @@ THIS IS A PROTOTYPE SO IT NEEDS SOME FIDDLING AROUND!! But it is fairly stable.
 - Weekly assignments requires level 8 character.
 - Also for deep diving you will neet at least a level 25 character!!!
 
-# Here is how this shthing goes down:
+# Here is how this sh*t goes down:
 
 0. Dowload my archive from here.  you will need a working http server for this.
 
