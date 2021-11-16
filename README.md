@@ -36,7 +36,7 @@ THIS IS A PROTOTYPE SO IT NEEDS SOME FIDDLING AROUND!! But it is fairly stable.
 
 # Here is how to use this tool:
 
-0. Dowload my archive from here.  you will need a working http server for this.
+0. Dowload my archive from here(XAMPP version).  you will need a working http server for this.
 
 1. Extract the archive to one hdd/ssd drive root to look like this c:\DeepDiveEmu_xampp\BlackBeard.exe
 
