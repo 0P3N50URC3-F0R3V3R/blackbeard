@@ -61,8 +61,10 @@ might not in the future....
 If you get a red message on the deep dive panels, you need to add the cert file again
 (both local user and local machine, highest container priority or what), restart machine, and try again the process.
 
-#Legal things
+#Legal things and disclaimer
 This program is written entire in Lazarus IDE and not using ANY code from the original game, its just a tool. This code is perfectly legal undrt the MIT license!
+
+With the usage, you are accepting that i am *not* responsible for any harm that comes to your account or freetime or any thing that comes from using this program. In theory this is perfectly safe to use, but i am not responsible for your mistakes. If you have doubt of this then do not use it. This is for Strictly educational purposes and thats it.
 
 Rocks and Stones!
 The webserver uses "443" and "8443" ports. it might be occupied so it is up to you what is using it if you cannot start apache, sorry.
