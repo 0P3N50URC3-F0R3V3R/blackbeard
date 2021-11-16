@@ -1,8 +1,9 @@
-# Black Beard 
-# DEEP ROCK GALACTIC - DEEPDIVE AND ASSIGNMENT EMULATOR
+# Black Beard Deep Dive emulator
+This is an OpenSource project for the game 
+DEEP ROCK GALACTIC - DEEPDIVE AND ASSIGNMENT EMULATOR
 
-# Currently Supported platform: Windows only.
 
+Currently Supported platform: Windows only.
 At the moment i am looking for people who is able to help me to 
 compile this to Linux debian or ubuntu or Raspbian Buster!
 
