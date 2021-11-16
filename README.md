@@ -45,6 +45,7 @@ All clients who will connect to you needs to give your web server's lan IP to he
 The game REQUIRES to use ports 443 and 8443
 
 127.0.0.1 services.ghostship.dk
+
 127.0.0.1 api.stathat.com
 
 3. Start xampp_control.exe and start apache. It will use only 2 ports: 443 and 8443 if you cannot start it you might have a program that uses those ports...
