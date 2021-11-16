@@ -427,7 +427,7 @@ begin
   if listbox1.ItemIndex=3 then memo1.Lines.Add('{"ActiveEvents":["Year03","Year03_Hat","Year03_Armor"]}');
   if listbox1.ItemIndex=4 then memo1.Lines.Add('{"ActiveEvents":["EarlyAccessHats"]}');
   if listbox1.ItemIndex=5 then memo1.Lines.Add('{"ActiveEvents":["SteamAwards2020"]}');
-  if listbox1.ItemIndex=5 then memo1.Lines.Add('{"ActiveEvents":["Halloween2021"]}');
+  if listbox1.ItemIndex=6 then memo1.Lines.Add('{"ActiveEvents":["Halloween2021"]}');
   Memo1.Lines.SaveToFile('htdocs\events'); //no file extension!
   Memo1.lines.Clear;
   // Deepdive

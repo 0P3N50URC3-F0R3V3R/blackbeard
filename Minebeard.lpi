@@ -25,6 +25,7 @@
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MinorVersionNr Value="4"/>
+      <BuildNr Value="2"/>
       <Attributes pvaPatched="True"/>
       <StringTable CompanyName="Knowhere"/>
     </VersionInfo>
