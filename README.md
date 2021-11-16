@@ -1,4 +1,9 @@
-# DEEPDIVE AND ASSIGNMENT EMULATOR DEEP ROCK GALACTIC - Supported clients: up to Update 35(Season one)
+# DEEPDIVE AND ASSIGNMENT EMULATOR 
+# FOR THE DEEP ROCK GALACTIC GAME
+# FOR OFFLINE GAMING
+
+Supported clients: up to Update 35(Season one)
+
 An Opensource offline working deep rock galactic - deepdive and weekly assignments 
 emulator and assignment scheduler.
 
