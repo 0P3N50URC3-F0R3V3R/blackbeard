@@ -1,6 +1,6 @@
 # DEEP ROCK GALACTIC GAME - DEEPDIVE AND ASSIGNMENT EMULATOR
 
-#LFG 
+# LFG - FOR LINUX VERSION
 Currently looking for people who is able to help me to compile this to Linux debian or ubuntu or Raspbian Buster!
 
 # Introduction
