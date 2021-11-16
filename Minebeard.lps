@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="3">
+      <Unit0>
+        <Filename Value="Minebeard.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="45"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="minebeard_main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Blackbeard"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="517"/>
+        <CursorPos X="3" Y="520"/>
+        <UsageCount Value="45"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="C:\lazarus\fpc\3.2.0\source\rtl\objpas\sysutils\dati.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="859"/>
+        <CursorPos X="10" Y="875"/>
+        <UsageCount Value="10"/>
+      </Unit2>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="595" Column="4" TopLine="591"/>
+      </Position1>
+      <Position2>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="192" Column="33" TopLine="183"/>
+      </Position2>
+      <Position3>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="608" TopLine="605"/>
+      </Position3>
+      <Position4>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="603" TopLine="600"/>
+      </Position4>
+      <Position5>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="618" Column="26" TopLine="600"/>
+      </Position5>
+      <Position6>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="617" TopLine="602"/>
+      </Position6>
+      <Position7>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="612" TopLine="602"/>
+      </Position7>
+      <Position8>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="616" Column="25" TopLine="603"/>
+      </Position8>
+      <Position9>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="551" Column="11" TopLine="508"/>
+      </Position9>
+      <Position10>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="329" Column="3" TopLine="327"/>
+      </Position10>
+      <Position11>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="552" Column="70" TopLine="547"/>
+      </Position11>
+      <Position12>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="454" Column="18" TopLine="437"/>
+      </Position12>
+      <Position13>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="448" Column="29" TopLine="433"/>
+      </Position13>
+      <Position14>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="138" TopLine="138"/>
+      </Position14>
+      <Position15>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="117" TopLine="103"/>
+      </Position15>
+      <Position16>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="131" TopLine="102"/>
+      </Position16>
+      <Position17>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="148" TopLine="133"/>
+      </Position17>
+      <Position18>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="209" Column="6" TopLine="199"/>
+      </Position18>
+      <Position19>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="207" Column="81" TopLine="207"/>
+      </Position19>
+      <Position20>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="324" Column="33" TopLine="316"/>
+      </Position20>
+      <Position21>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="329" Column="52" TopLine="316"/>
+      </Position21>
+      <Position22>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="324" Column="3" TopLine="316"/>
+      </Position22>
+      <Position23>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="409" Column="58" TopLine="407"/>
+      </Position23>
+      <Position24>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="381" Column="3" TopLine="379"/>
+      </Position24>
+      <Position25>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="203" Column="69" TopLine="191"/>
+      </Position25>
+      <Position26>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="205" Column="69" TopLine="205"/>
+      </Position26>
+      <Position27>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="6" Column="24"/>
+      </Position27>
+      <Position28>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="8" Column="20" TopLine="618"/>
+      </Position28>
+      <Position29>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="333" Column="41" TopLine="317"/>
+      </Position29>
+      <Position30>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="327" Column="3" TopLine="316"/>
+      </Position30>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
