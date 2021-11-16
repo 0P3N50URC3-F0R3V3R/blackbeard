@@ -4,7 +4,7 @@
 Supported clients: up to Update 35(Season one)
 
 An Opensource offline working deep rock galactic - deepdive and weekly assignments 
-emulator and assignment scheduler.
+emulator and assignment scheduler written in LAZARUS IDE pascal.
 
 Okay so i made an offline working DeepDive and weekly assigment "emulator" (it is very bold to call it emulator, lets just call it "bypass" or "mimcking" or what... :D :P)
 Basicly; its mimicks the events and deepdive missions like in original; but in offline mode thru a XAMPP apache server and a self signed cert file... that is good for us;
@@ -27,7 +27,7 @@ THIS IS A PROTOTYPE SO IT NEEDS SOME FIDDLING AROUND!! But it is fairly stable.
 - Weekly assignments requires level 8 character.
 - Also for deep diving you will neet at least a level 25 character!!!
 
-# Here is how this sh*t goes down:
+# Here is how to use this tool:
 
 0. Dowload my archive from here.  you will need a working http server for this.
 
@@ -60,6 +60,9 @@ might not in the future....
 # Troubleshooting
 If you get a red message on the deep dive panels, you need to add the cert file again
 (both local user and local machine, highest container priority or what), restart machine, and try again the process.
+
+#Legal things
+This program is written entire in Lazarus IDE and not using ANY code from the original game, its just a tool. This code is perfectly legal undrt the MIT license!
 
 Rocks and Stones!
 The webserver uses "443" and "8443" ports. it might be occupied so it is up to you what is using it if you cannot start apache, sorry.
