@@ -19,7 +19,6 @@ type
 
   TBlackbeard = class(TForm)
     Action1: TAction;
-    Action2: TAction;
     ActionList1: TActionList;
     Bevel1: TBevel;
     BitBtn1: TBitBtn;
@@ -190,13 +189,6 @@ begin
 // Using new method:
    DefaultFormatSettings.DateSeparator:='-';
    DateEdit1.DefaultToday:=True;
-// Only single instance can be run at a time to prevent errors
-hFile := FileOpen(ParamStr(0), fmOpenRead or fmShareExclusive);
-if (hFile = -1) then
-begin
-  ShowMessage('This program already started.');
-  Application.Terminate;
-end;
 
 //Check Admin rights. If not show warning, but you can still run it with possible errors.
 if winutils.iswindowsadmin() then Label20.Hide;
@@ -324,7 +316,7 @@ end;
 procedure TBlackbeard.MenuItem10Click(Sender: TObject);
 begin
   // Open server.cert to install add message before
-  executeprocess('',['server.cert']);
+  executeprocess('server.cert',['']);
 end;
 
 procedure TBlackbeard.MenuItem11Click(Sender: TObject);
@@ -719,7 +711,11 @@ begin
          Event_time.Position:=Event_time.Position-1;
          //here needs the file writing method in each passing second. Since the games watch ingame the time in json
          //Save all values/files just to be sure.
-         BitBtn1.Click;
+         Memo1.Lines.Clear;
+         if Checkbox1.Checked=true then Memo1.Lines.Add('{"IsGoal":true,"IsRecruitment":true,"FreeBeers":true,"TimeLeftSeconds":'+Edit6.Text+',"LastUpdateGoalsID":23384,"CurrentGoalPeriodID":11903427}');
+         if Checkbox1.Checked=false then Memo1.Lines.Add('{"IsGoal":true,"IsRecruitment":true,"FreeBeers":false,"TimeLeftSeconds":'+Edit6.Text+',"LastUpdateGoalsID":23384,"CurrentGoalPeriodID":11903427}');
+         Memo1.Lines.SaveToFile('htdocs\cGoalStateTime'); //no file extension!
+         Memo1.Lines.Clear;
     end;
 
 
@@ -773,7 +769,7 @@ begin
 
 end;
 
-procedure TBlackbeard                        .Trayicon1DblClick(Sender: TObject);
+procedure TBlackbeard.Trayicon1DblClick(Sender: TObject);
 begin
   Menuitem1.Click;
 end;

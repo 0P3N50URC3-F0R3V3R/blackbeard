@@ -1,7 +1,7 @@
 object Blackbeard: TBlackbeard
-  Left = 450
+  Left = 539
   Height = 508
-  Top = 200
+  Top = 132
   Width = 845
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
@@ -4545,11 +4545,6 @@ object Blackbeard: TBlackbeard
       Caption = 'Action1'
       OnExecute = Action1Execute
       ShortCut = 16467
-    end
-    object Action2: TAction
-      Caption = 'Action2'
-      OnExecute = Action2Execute
-      ShortCut = 32
     end
   end
   object MainMenu1: TMainMenu
