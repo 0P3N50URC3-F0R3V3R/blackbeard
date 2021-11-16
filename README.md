@@ -3,6 +3,13 @@
 # Introduction
 Supported clients: up to Update 35(Season one)
 
+
+# LFG - FOR LINUX VERSION.Currently Windows only supported.
+
+Currently Supported platform: Windows
+At the moment i am looking for people who is able to help me to 
+compile this to Linux debian or ubuntu or Raspbian Buster!
+
 An Opensource offline working deep rock galactic - deepdive and weekly assignments 
 emulator and assignment scheduler written in LAZARUS IDE pascal.
 
