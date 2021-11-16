@@ -1,6 +1,6 @@
-# Black Beard Deep Dive emulator
+# BlackBeard Event Emulator
 This is an OpenSource project for the game 
-DEEP ROCK GALACTIC - DEEPDIVE AND ASSIGNMENT EMULATOR
+DEEP ROCK GALACTIC - DEEPDIVE, ASSIGNMENT AND EVENT EMULATOR
 
 
 Currently Supported platform: Windows only.
