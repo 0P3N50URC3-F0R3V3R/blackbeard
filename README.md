@@ -1,5 +1,9 @@
 # DEEP ROCK GALACTIC GAME - DEEPDIVE AND ASSIGNMENT EMULATOR
 
+#LFG 
+Currently looking for people who is able to help me to compile this to Linux debian or ubuntu or Raspbian Buster!
+
+# Introduction
 Supported clients: up to Update 35(Season one)
 
 An Opensource offline working deep rock galactic - deepdive and weekly assignments 
