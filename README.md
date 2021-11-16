@@ -1,8 +1,5 @@
 # DEEP ROCK GALACTIC GAME - DEEPDIVE AND ASSIGNMENT EMULATOR
 
-# LFG - FOR LINUX VERSION
-Currently looking for people who is able to help me to compile this to Linux debian or ubuntu or Raspbian Buster!
-
 # Introduction
 Supported clients: up to Update 35(Season one)
 
@@ -71,3 +68,6 @@ With the usage, you are accepting that i am *not* responsible for any harm that 
 
 Rocks and Stones!
 The webserver uses "443" and "8443" ports. it might be occupied so it is up to you what is using it if you cannot start apache, sorry.
+
+# LFG - FOR LINUX VERSION
+Currently looking for people who is able to help me to compile this to Linux debian or ubuntu or Raspbian Buster!
