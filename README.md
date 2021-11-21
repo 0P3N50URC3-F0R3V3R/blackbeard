@@ -3,9 +3,8 @@ This is an OpenSource project for the game
 DEEP ROCK GALACTIC - DEEPDIVE, ASSIGNMENT AND EVENT EMULATOR
 
 
-Currently Supported platform: Windows only.
-At the moment i am looking for people who is able to help me to 
-compile this to Linux debian or ubuntu or Raspbian Buster!
+Currently Supported platform: Windows, or linux only.
+For the linux it does not need any big deal it will work on any pascal compiler and on an apache2 server(you need to add the fake cert manually though)
 
 # Introduction
 Supported clients: up to Update 35(Season one)
@@ -76,6 +75,3 @@ With the usage, you are accepting that i am *not* responsible for any harm that 
 
 Rocks and Stones!
 The webserver uses "443" and "8443" ports. it might be occupied so it is up to you what is using it if you cannot start apache, sorry.
-
-# LFG - FOR LINUX VERSION
-Currently looking for people who is able to help me to compile this to Linux debian or ubuntu or Raspbian Buster!
