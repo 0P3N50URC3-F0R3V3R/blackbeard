@@ -3,7 +3,7 @@ This is an OpenSource project for the game
 DEEP ROCK GALACTIC - DEEPDIVE, ASSIGNMENT AND EVENT EMULATOR
 
 
-Currently Supported platform: Windows, or linux only.
+Currently Supported platform: Windows, or linux(Tested on Raspberry Buster, debian and ubuntu) only.
 For the linux it does not need any big deal it will work on any pascal compiler and on an apache2 server(you need to add the fake cert manually though)
 
 # Introduction
