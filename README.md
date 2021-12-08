@@ -31,6 +31,7 @@ THIS IS A PROTOTYPE SO IT NEEDS SOME FIDDLING AROUND!! But it is fairly stable.
 
 # Good to know: 
 - Weekly assignments requires level 8 character This is the BLUE level indicator NOT THE RED!.
+- Weekly assignments WONT BE VISIBLE until you reach level 8. Until then just premade assignments visible.
 - For get into deep diving you will neet at least a level 25 character!!!
 - ALWAYS START THE BLACKBEARD PROGRAM WITH SYSTEM ADMIN RIGHTS IN WINDOWS! OTHERWISE THE PROGRAM WONT BE ABLE TO SAVE YOUR FILE!
 - YOU NEED TO SET THE DATE TO YOURSELF! The program wont select to you new dates.
@@ -46,7 +47,6 @@ All clients who will connect to you needs to give your web server's lan IP to he
 The game REQUIRES to use ports 443 and 8443
 
 127.0.0.1 services.ghostship.dk
-
 127.0.0.1 api.stathat.com
 
 3. Start xampp_control.exe and start apache. It will use only 2 ports: 443 and 8443 if you cannot start it you might have a program that uses those ports...
