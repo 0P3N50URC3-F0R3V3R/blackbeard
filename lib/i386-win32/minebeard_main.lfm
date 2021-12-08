@@ -1,11 +1,11 @@
 object Blackbeard: TBlackbeard
-  Left = 539
+  Left = 426
   Height = 508
-  Top = 132
+  Top = 178
   Width = 845
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = 'Black Beard V0.4'
+  Caption = 'Black Beard V0.4.1'
   ClientHeight = 488
   ClientWidth = 845
   Color = 14080730
@@ -640,6 +640,7 @@ object Blackbeard: TBlackbeard
         'Early Access Hats'
         'Steam Awards 2020 (Not working)'
         'Halloween2021 (for S01 Update)'
+        'Christmas2021 (for S01 Update)'
       )
       ItemHeight = 15
       OnClick = ListBox1Click
