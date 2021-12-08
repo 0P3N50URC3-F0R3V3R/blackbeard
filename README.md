@@ -30,8 +30,10 @@ On lan you can share with other players your xampp deepdive server IP adresses t
 THIS IS A PROTOTYPE SO IT NEEDS SOME FIDDLING AROUND!! But it is fairly stable.
 
 # Good to know: 
-- Weekly assignments requires level 8 character.
-- Also for deep diving you will neet at least a level 25 character!!!
+- Weekly assignments requires level 8 character This is the BLUE level indicator NOT THE RED!.
+- For get into deep diving you will neet at least a level 25 character!!!
+- ALWAYS START THE BLACKBEARD PROGRAM WITH SYSTEM ADMIN RIGHTS IN WINDOWS! OTHERWISE THE PROGRAM WONT BE ABLE TO SAVE YOUR FILE!
+- YOU NEED TO SET THE DATE TO YOURSELF! The program wont select to you new dates.
 
 # Here is how to use this tool:
 
