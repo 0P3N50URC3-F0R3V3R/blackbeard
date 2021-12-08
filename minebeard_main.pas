@@ -194,7 +194,7 @@ begin
 if winutils.iswindowsadmin() then Label20.Hide;
 
 //Statusbar Refresh/details
-Statusbar1.SimpleText:='Black Beard - Deepdive / Event Emulator V0.4';
+Statusbar1.SimpleText:='Black Beard - Deepdive / Event Emulator V0.4.1 - Xmas Fix 2021';
 
 //Status Refresh - Program Creation section
 // 1 Week is 604800 Seconds / 1 Day is 86 400 Seconds / 1 Hour is 3600 Seconds
