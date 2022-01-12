@@ -8,6 +8,7 @@ For the linux it does not need any big deal it will work on any pascal compiler 
 
 # Introduction
 Supported clients: up to Update 35(Season one)
+# YOU NEED SYSTEM ADMINISTRATOR ACCOUNT ON WINDOWS(TRUE ADMIN) OR BLACKBEARD PROGRAM WILL NO WORK WELL(IT WONT HAVE WRITE ACCESS!)
 
 An Opensource offline working deep rock galactic - deepdive and weekly assignments 
 emulator and assignment scheduler written in LAZARUS IDE pascal.
