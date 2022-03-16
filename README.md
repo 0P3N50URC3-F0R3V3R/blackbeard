@@ -7,7 +7,7 @@ Currently Supported platform: Windows, or linux(Tested on Raspberry Buster, debi
 For the linux it does not need any big deal it will work on any pascal compiler and on an apache2 server(you need to add the fake cert manually though)
 
 # Introduction
-Supported clients: up to Update 35(Season one)
+Supported clients: up to Update 35(Season one)Patch 3
 # YOU NEED SYSTEM ADMINISTRATOR ACCOUNT ON WINDOWS(TRUE ADMIN) OR BLACKBEARD PROGRAM WILL NO WORK WELL(IT WONT HAVE WRITE ACCESS!)
 
 An Opensource offline working deep rock galactic - deepdive and weekly assignments 
