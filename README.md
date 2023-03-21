@@ -1,8 +1,7 @@
 # BlackBeard Event Emulator
-This is an OpenSource project for the game 
-DEEP ROCK GALACTIC - DEEPDIVE, ASSIGNMENT AND EVENT EMULATOR 
-It is in RC1 state, but useable.
+This is an OpenSource project for the game DEEP ROCK GALACTIC It is in RC1 state, but useable.
 
+As of now, the maximal supported client version(That i designed with it) is 1.37.81454.0 And older versions. To Aquire those you need to have the original game and download from steam manifests manually thru SteamCMD. You have to solve it yourself that part.
 
 Currently Supported platform: Windows, or linux(Tested on Raspberry Buster, debian and ubuntu) only. You need to compile it yourself though.
 For the linux it does not need any big deal it will work on any pascal compiler and on an apache2 server(you need to add the fake cert manually though)
