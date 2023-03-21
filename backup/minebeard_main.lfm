@@ -190,7 +190,7 @@ object Blackbeard: TBlackbeard
         Top = 0
         Width = 251
         AutoFill = True
-        Caption = 'System Status Checker'
+        Caption = 'System Status Checker - UNFINISHED'
         ChildSizing.LeftRightSpacing = 6
         ChildSizing.TopBottomSpacing = 6
         ChildSizing.EnlargeHorizontal = crsHomogenousChildResize

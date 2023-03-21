@@ -619,7 +619,7 @@ begin
   if listbox1.ItemIndex=14 then memo1.Lines.Add('{"ActiveEvents":["GreatEggHunt"]}');
   if listbox1.ItemIndex=15 then memo1.Lines.Add('{"ActiveEvents":["LunarFestival"]}');
 
-  Memo1.Lines.SaveToFile('htdocs\events'); //no file extension! OLDER VERSIONS
+ //  Memo1.Lines.SaveToFile('htdocs\events'); //no file extension! OLDER VERSIONS
   Memo1.Lines.SaveToFile('htdocs\drg.ghostship.dk\events\events'); //no file extension!
   Memo1.Lines.SaveToFile('htdocs\services.ghostship.dk\events'); //no file extension!
   Memo1.lines.Clear;
@@ -632,7 +632,7 @@ begin
   if divedate=''  then divedate:='2100-01-01';
   Memo1.Lines.Clear;
   Memo1.Lines.Add('{"Seed":'+Edit1.Text+',"SeedV2":'+Edit2.Text+',"ExpirationTime":"'+divedate+'T23:59:59Z"}');
-  Memo1.Lines.SaveToFile('htdocs\deepdive'); //no file extension! OLDER VERSIONS!
+//  Memo1.Lines.SaveToFile('htdocs\deepdive'); //no file extension! OLDER VERSIONS!
   Memo1.Lines.SaveToFile('htdocs\drg.ghostship.dk\events\deepdive'); //no file extension!
   Memo1.Lines.SaveToFile('htdocs\services.ghostship.dk\deepdive'); //no file extension!
   Memo1.Lines.Clear;
@@ -645,7 +645,7 @@ begin
   if weeklydate=''  then weeklydate:='2100-01-01';
   Memo1.Lines.Clear;
   Memo1.Lines.Add('{"Seed":'+Edit3.Text+',"ExpirationTime":"'+weeklydate+'T23:59:59Z"}');
-  Memo1.Lines.SaveToFile('htdocs\weekly'); //no file extension!  OLDER VERSION SAVE
+//   Memo1.Lines.SaveToFile('htdocs\weekly'); //no file extension!  OLDER VERSION SAVE
   Memo1.Lines.SaveToFile('htdocs\drg.ghostship.dk\events\weekly'); //no file extension!
   Memo1.Lines.SaveToFile('htdocs\services.ghostship.dk\weekly'); //no file extension!
   Memo1.Lines.Clear;
@@ -654,7 +654,7 @@ begin
   Memo1.Lines.Clear;
   if Checkbox1.Checked=true then Memo1.Lines.Add('{"IsGoal":true,"IsRecruitment":true,"FreeBeers":true,"TimeLeftSeconds":'+Edit6.Text+',"LastUpdateGoalsID":23384,"CurrentGoalPeriodID":11903427}');
   if Checkbox1.Checked=false then Memo1.Lines.Add('{"IsGoal":true,"IsRecruitment":true,"FreeBeers":false,"TimeLeftSeconds":'+Edit6.Text+',"LastUpdateGoalsID":23384,"CurrentGoalPeriodID":11903427}');
-  Memo1.Lines.SaveToFile('htdocs\cGoalStateTime'); //no file extension!
+//  Memo1.Lines.SaveToFile('htdocs\cGoalStateTime'); //no file extension!
   Memo1.Lines.SaveToFile('htdocs\drg.ghostship.dk\events\cGoalStateTime'); //no file extension!
   Memo1.Lines.SaveToFile('htdocs\services.ghostship.dk\cGoalStateTime'); //no file extension!
   Memo1.Lines.Clear;
@@ -943,7 +943,7 @@ begin
          Memo1.Lines.Clear;
          if Checkbox1.Checked=true then Memo1.Lines.Add('{"IsGoal":true,"IsRecruitment":true,"FreeBeers":true,"TimeLeftSeconds":'+Edit6.Text+',"LastUpdateGoalsID":23384,"CurrentGoalPeriodID":11903427}');
          if Checkbox1.Checked=false then Memo1.Lines.Add('{"IsGoal":true,"IsRecruitment":true,"FreeBeers":false,"TimeLeftSeconds":'+Edit6.Text+',"LastUpdateGoalsID":23384,"CurrentGoalPeriodID":11903427}');
-         Memo1.Lines.SaveToFile('htdocs\cGoalStateTime'); //no file extension!
+//         Memo1.Lines.SaveToFile('htdocs\cGoalStateTime'); //no file extension!
          Memo1.Lines.SaveToFile('htdocs\drg.ghostship.dk\events\cGoalStateTime'); //no file extension!
          Memo1.Lines.SaveToFile('htdocs\services.ghostship.dk\cGoalStateTime'); //no file extension!
          Memo1.Lines.Clear;

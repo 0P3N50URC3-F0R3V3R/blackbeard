@@ -31,10 +31,10 @@ object Blackbeard: TBlackbeard
     ShowHint = True
   end
   object Memo2: TMemo
-    Left = 475
+    Left = 480
     Height = 312
     Top = 24
-    Width = 206
+    Width = 201
     BorderStyle = bsNone
     Lines.Strings = (
       'Make notes for the seeds / ect.'
