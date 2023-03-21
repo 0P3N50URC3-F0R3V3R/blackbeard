@@ -1,6 +1,7 @@
 # BlackBeard Event Emulator
 This is an OpenSource project for the game 
-DEEP ROCK GALACTIC - DEEPDIVE, ASSIGNMENT AND EVENT EMULATOR
+DEEP ROCK GALACTIC - DEEPDIVE, ASSIGNMENT AND EVENT EMULATOR 
+It is in RC1 state, but useable.
 
 
 Currently Supported platform: Windows, or linux(Tested on Raspberry Buster, debian and ubuntu) only. You need to compile it yourself though.
@@ -66,6 +67,8 @@ If you get a red message on the deep dive panels, you need to add the cert file 
 This program is written entire in Lazarus IDE and not using ANY code from the original game, its just a tool. This code is perfectly legal undrt the GPL license!
 
 With the usage, you are accepting that i am *not* responsible for any harm that comes to your account or freetime or any thing that comes from using this program. In theory this is perfectly safe to use, but i am not responsible for your mistakes. If you have doubt of this then do not use it. This is for Strictly educational purposes and thats it.
+
+THANK YOU FOR Ravest95 for his contributions!
 
 Rocks and Stones!
 The webserver uses "443" and "8443" ports. it might be occupied so it is up to you what is using it if you cannot start apache, sorry.
