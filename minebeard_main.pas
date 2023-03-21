@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  ComCtrls, Buttons, Menus, PopupNotifier, Arrow, EditBtn, ActnList,
+  ComCtrls, Buttons, Menus, PopupNotifier, Arrow, EditBtn, ActnList, CheckLst,
   DateTimePicker, TAGraph, TASeries, TAIntervalSources, TASources, TAStyles,
   ExtendedNotebook, IniFiles, winutils, DateUtils;
 
@@ -27,6 +27,7 @@ type
     BitBtn4: TBitBtn;
     BitBtn5: TBitBtn;
     BitBtn6: TBitBtn;
+    BitBtn7: TBitBtn;
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
@@ -39,15 +40,27 @@ type
     CheckBox3: TCheckBox;
     CheckBox4: TCheckBox;
     CheckBox5: TCheckBox;
+    CheckGroup1: TCheckGroup;
     DateEdit1: TDateEdit;
     DateEdit2: TDateEdit;
     DateEdit3: TDateEdit;
     DateEdit4: TDateEdit;
+    Deepdive_time: TProgressBar;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Edit4: TEdit;
     Edit5: TEdit;
     Edit6: TEdit;
     Edit7: TEdit;
+    Event_time: TProgressBar;
+    GroupBox1: TGroupBox;
+    GroupBox2: TGroupBox;
+    GroupBox3: TGroupBox;
+    GroupBox4: TGroupBox;
     GroupBox5: TGroupBox;
     GroupBox6: TGroupBox;
+    Label1: TLabel;
     Label10: TLabel;
     Label11: TLabel;
     Label12: TLabel;
@@ -62,8 +75,21 @@ type
     Label20: TLabel;
     Label21: TLabel;
     Label22: TLabel;
+    Label23: TLabel;
+    Label25: TLabel;
+    Label26: TLabel;
+    Label27: TLabel;
+    Label28: TLabel;
+    Label29: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
     Label9: TLabel;
     ListBox1: TListBox;
+    ListBox2: TListBox;
     MainMenu1: TMainMenu;
     Memo1: TMemo;
     Memo2: TMemo;
@@ -77,6 +103,7 @@ type
     MenuItem16: TMenuItem;
     MenuItem17: TMenuItem;
     MenuItem18: TMenuItem;
+    MenuItem19: TMenuItem;
     MenuItem2: TMenuItem;
     MenuItem3: TMenuItem;
     MenuItem4: TMenuItem;
@@ -85,28 +112,17 @@ type
     MenuItem7: TMenuItem;
     MenuItem8: TMenuItem;
     MenuItem9: TMenuItem;
+    PageControl1: TPageControl;
     StatusBar1: TStatusBar;
+    TabSheet1: TTabSheet;
+    TabSheet2: TTabSheet;
+    TabSheet3: TTabSheet;
+    TabSheet4: TTabSheet;
+    TabSheet7: TTabSheet;
     Traymenu: TPopupMenu;
     Trayicon1: TTrayIcon;
-    Weekly_time1: TProgressBar;
-    Edit1: TEdit;
-    Edit2: TEdit;
-    Edit3: TEdit;
-    Edit4: TEdit;
-    GroupBox1: TGroupBox;
-    GroupBox2: TGroupBox;
-    GroupBox3: TGroupBox;
-    GroupBox4: TGroupBox;
-    Label1: TLabel;
-    Label3: TLabel;
-    Label4: TLabel;
-    Label5: TLabel;
-    Deepdive_time: TProgressBar;
-    Label6: TLabel;
-    Label7: TLabel;
-    Label8: TLabel;
     Timer1: TTimer;
-    Event_time: TProgressBar;
+    Weekly_time1: TProgressBar;
     procedure Action1Execute(Sender: TObject);
     procedure Action2Execute(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
@@ -115,6 +131,7 @@ type
     procedure BitBtn4Click(Sender: TObject);
     procedure BitBtn5Click(Sender: TObject);
     procedure BitBtn6Click(Sender: TObject);
+    procedure BitBtn7Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
@@ -126,6 +143,7 @@ type
     procedure CheckBox2Change(Sender: TObject);
     procedure CheckBox3Change(Sender: TObject);
     procedure CheckBox4Change(Sender: TObject);
+    procedure ComboBox1Change(Sender: TObject);
     procedure DateEdit1Change(Sender: TObject);
     procedure DateEdit2Change(Sender: TObject);
     procedure DateEdit3Change(Sender: TObject);
@@ -147,6 +165,8 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormWindowStateChange(Sender: TObject);
     procedure ListBox1Click(Sender: TObject);
+    procedure ListBox2Click(Sender: TObject);
+    procedure ListBox2ShowHint(Sender: TObject; HintInfo: PHintInfo);
     procedure Memo2Change(Sender: TObject);
     procedure MenuItem10Click(Sender: TObject);
     procedure MenuItem11Click(Sender: TObject);
@@ -154,12 +174,14 @@ type
     procedure MenuItem15Click(Sender: TObject);
     procedure MenuItem16Click(Sender: TObject);
     procedure MenuItem18Click(Sender: TObject);
+    procedure MenuItem19Click(Sender: TObject);
     procedure MenuItem1Click(Sender: TObject);
     procedure MenuItem2Click(Sender: TObject);
     procedure MenuItem3Click(Sender: TObject);
     procedure MenuItem6Click(Sender: TObject);
     procedure MenuItem7Click(Sender: TObject);
     procedure MenuItem9Click(Sender: TObject);
+    procedure Notifier1Close(Sender: TObject; var CloseAction: TCloseAction);
     procedure Timer1Timer(Sender: TObject);
     procedure Trayicon1Click(Sender: TObject);
     procedure Trayicon1DblClick(Sender: TObject);
@@ -184,17 +206,34 @@ var
     inivalue : string;
     hFile : integer;
 begin
+
+// COMPILED WITH DWARF3+ SET. MADE WITH LAZARUS IDE 2.2.6!
+
 // Set the Date format for compatibility to DRG
 // Deprecated :  DateSeparator := '-';
 // Using new method:
    DefaultFormatSettings.DateSeparator:='-';
    DateEdit1.DefaultToday:=True;
+// Set the default main page
+PageControl1.TabIndex:=0;
+Tabsheet1.Color:= TColor($000BD7D1);
+
+//Other checks with the program:
+// XAMPP runs?
+// Ports 443 and 8443 avaliable?
+// is Hosts file has the required entries?
+// Is Cert files installed?
+
 
 //Check Admin rights. If not show warning, but you can still run it with possible errors.
-if winutils.iswindowsadmin() then Label20.Hide;
+if winutils.iswindowsadmin() then
+   begin
+        Label20.Hide;
+        CheckGroup1.Checked[5]:=true;
+   end;
 
 //Statusbar Refresh/details
-Statusbar1.SimpleText:='Black Beard - Deepdive / Event Emulator V0.4.1 - Xmas Fix 2021';
+Statusbar1.SimpleText:='Black Beard - Deepdive / Event Emulator V0.8.0';
 
 //Status Refresh - Program Creation section
 // 1 Week is 604800 Seconds / 1 Day is 86 400 Seconds / 1 Hour is 3600 Seconds
@@ -308,6 +347,133 @@ begin
   BitBtn1.Click;
 end;
 
+procedure TBlackbeard.ListBox2Click(Sender: TObject);
+begin
+  // Predefined Official Deepdives with seed, seed v2 and event number
+  // (it will set the required events automaticly for the Deepdives to recreate the same conditions like it was in the original event.)
+  // For some selection require older clients.
+  if Listbox2.ItemIndex=0 then begin Edit1.Text:='1000000000'; Edit2.Text:='1000000000'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=1 then begin Edit1.Text:='3612673878'; Edit2.Text:='3612673878'; ListBox1.ItemIndex:=8; end;
+  if Listbox2.ItemIndex=2 then begin Edit1.Text:='1548537513'; Edit2.Text:='1548537513'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=3 then begin Edit1.Text:='345799'; Edit2.Text:='345799'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=4 then begin Edit1.Text:='2299715386'; Edit2.Text:='2299715386'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=5 then begin Edit1.Text:='2292833010'; Edit2.Text:='2292833010'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=6 then begin Edit1.Text:='64284013'; Edit2.Text:='64284013'; ListBox1.ItemIndex:=9; end;
+  if Listbox2.ItemIndex=7 then begin Edit1.Text:='53284948'; Edit2.Text:='53284948'; ListBox1.ItemIndex:=9; end;
+  if Listbox2.ItemIndex=8 then begin Edit1.Text:='17302019'; Edit2.Text:='17302019'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=9 then begin Edit1.Text:='2447339677'; Edit2.Text:='2447339677'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=10 then begin Edit1.Text:='4175859195'; Edit2.Text:='4175859195'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=11 then begin Edit1.Text:='915259912'; Edit2.Text:='915259912'; ListBox1.ItemIndex:=10; end;
+  if Listbox2.ItemIndex=12 then begin Edit1.Text:='2208627937'; Edit2.Text:='2208627937'; ListBox1.ItemIndex:=10; end;
+  if Listbox2.ItemIndex=13 then begin Edit1.Text:='1957576731'; Edit2.Text:='1957576731'; ListBox1.ItemIndex:=10; end;
+  if Listbox2.ItemIndex=14 then begin Edit1.Text:='1208406893'; Edit2.Text:='1208406893'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=15 then begin Edit1.Text:='55936418'; Edit2.Text:='55936418'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=16 then begin Edit1.Text:='2100157499'; Edit2.Text:='2100157499'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=17 then begin Edit1.Text:='9336201'; Edit2.Text:='9336201'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=18 then begin Edit1.Text:='3325792159'; Edit2.Text:='3325792159'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=19 then begin Edit1.Text:='24584328'; Edit2.Text:='24584328'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=20 then begin Edit1.Text:='2495444811'; Edit2.Text:='2495444811'; ListBox1.ItemIndex:=11; end;
+  if Listbox2.ItemIndex=21 then begin Edit1.Text:='4282007030'; Edit2.Text:='4282007030'; ListBox1.ItemIndex:=11; end;
+  if Listbox2.ItemIndex=22 then begin Edit1.Text:='2497457359'; Edit2.Text:='2497457359'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=23 then begin Edit1.Text:='1027742581'; Edit2.Text:='1027742581'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=24 then begin Edit1.Text:='1246332814'; Edit2.Text:='1246332814'; ListBox1.ItemIndex:=12; end;
+  if Listbox2.ItemIndex=25 then begin Edit1.Text:='4047100427'; Edit2.Text:='4047100427'; ListBox1.ItemIndex:=12; end;
+  if Listbox2.ItemIndex=26 then begin Edit1.Text:='4183416793'; Edit2.Text:='4183416793'; ListBox1.ItemIndex:=12; end;
+  if Listbox2.ItemIndex=27 then begin Edit1.Text:='2646148811'; Edit2.Text:='2646148811'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=28 then begin Edit1.Text:='2357971011'; Edit2.Text:='2357971011'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=29 then begin Edit1.Text:='3699734257'; Edit2.Text:='3699734257'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=30 then begin Edit1.Text:='2603781769'; Edit2.Text:='2603781769'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=31 then begin Edit1.Text:='1058533019'; Edit2.Text:='1058533019'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=32 then begin Edit1.Text:='1614119939'; Edit2.Text:='1614119939'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=33 then begin Edit1.Text:='3705538791'; Edit2.Text:='3705538791'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=34 then begin Edit1.Text:='897073810'; Edit2.Text:='897073810'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=35 then begin Edit1.Text:='2406381865'; Edit2.Text:='2406381865'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=36 then begin Edit1.Text:='3676333833'; Edit2.Text:='3676333833'; ListBox1.ItemIndex:=13; end;
+  if Listbox2.ItemIndex=37 then begin Edit1.Text:='1305006093'; Edit2.Text:='1305006093'; ListBox1.ItemIndex:=13; end;
+  if Listbox2.ItemIndex=38 then begin Edit1.Text:='3010393980'; Edit2.Text:='3010393980'; ListBox1.ItemIndex:=13; end;
+  if Listbox2.ItemIndex=39 then begin Edit1.Text:='34332551'; Edit2.Text:='34332551'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=40 then begin Edit1.Text:='2341946094'; Edit2.Text:='2341946094'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=41 then begin Edit1.Text:='4063720098'; Edit2.Text:='4063720098'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=42 then begin Edit1.Text:='2671425074'; Edit2.Text:='2671425074'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=43 then begin Edit1.Text:='4088056935'; Edit2.Text:='4088056935'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=44 then begin Edit1.Text:='2916679213'; Edit2.Text:='2916679213'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=45 then begin Edit1.Text:='238590152'; Edit2.Text:='238590152'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=46 then begin Edit1.Text:='585053766'; Edit2.Text:='585053766'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=47 then begin Edit1.Text:='482707241'; Edit2.Text:='482707241'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=48 then begin Edit1.Text:='1850985369'; Edit2.Text:='1850985369'; ListBox1.ItemIndex:=14; end;
+  if Listbox2.ItemIndex=49 then begin Edit1.Text:='1855204199'; Edit2.Text:='1855204199'; ListBox1.ItemIndex:=14; end;
+  if Listbox2.ItemIndex=50 then begin Edit1.Text:='3822179595'; Edit2.Text:='3822179595'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=51 then begin Edit1.Text:='2022907382'; Edit2.Text:='2022907382'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=52 then begin Edit1.Text:='3540345438'; Edit2.Text:='3540345438'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=53 then begin Edit1.Text:='360600801'; Edit2.Text:='360600801'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=54 then begin Edit1.Text:='778847304'; Edit2.Text:='778847304'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=55 then begin Edit1.Text:='2548152425'; Edit2.Text:='2548152425'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=56 then begin Edit1.Text:='978788711'; Edit2.Text:='978788711'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=57 then begin Edit1.Text:='1121997788'; Edit2.Text:='1121997788'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=58 then begin Edit1.Text:='3342738588'; Edit2.Text:='3342738588'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=59 then begin Edit1.Text:='889476702'; Edit2.Text:='889476702'; ListBox1.ItemIndex:=15; end;
+  if Listbox2.ItemIndex=60 then begin Edit1.Text:='3759848501'; Edit2.Text:='3759848501'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=61 then begin Edit1.Text:='1629577529'; Edit2.Text:='1629577529'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=62 then begin Edit1.Text:='2978985698'; Edit2.Text:='2978985698'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=63 then begin Edit1.Text:='571566190'; Edit2.Text:='571566190'; ListBox1.ItemIndex:=7; end;
+  if Listbox2.ItemIndex=64 then begin Edit1.Text:='115278228'; Edit2.Text:='115278228'; ListBox1.ItemIndex:=7; end;
+  if Listbox2.ItemIndex=65 then begin Edit1.Text:='912177614'; Edit2.Text:='912177614'; ListBox1.ItemIndex:=7; end;
+  if Listbox2.ItemIndex=66 then begin Edit1.Text:='594998802'; Edit2.Text:='594998802'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=67 then begin Edit1.Text:='2758629646'; Edit2.Text:='2758629646'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=68 then begin Edit1.Text:='1946138399'; Edit2.Text:='1946138399'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=69 then begin Edit1.Text:='822483547'; Edit2.Text:='822483547'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=70 then begin Edit1.Text:='1749439021'; Edit2.Text:='1749439021'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=71 then begin Edit1.Text:='517153551'; Edit2.Text:='517153551'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=72 then begin Edit1.Text:='4050420743'; Edit2.Text:='4050420743'; ListBox1.ItemIndex:=6; end;
+  if Listbox2.ItemIndex=73 then begin Edit1.Text:='3709602013'; Edit2.Text:='3709602013'; ListBox1.ItemIndex:=6; end;
+  if Listbox2.ItemIndex=74 then begin Edit1.Text:='1169891667'; Edit2.Text:='1169891667'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=75 then begin Edit1.Text:='669402466'; Edit2.Text:='669402466'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=76 then begin Edit1.Text:='52990441'; Edit2.Text:='52990441'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=77 then begin Edit1.Text:='3780047724'; Edit2.Text:='3780047724'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=78 then begin Edit1.Text:='1475535139'; Edit2.Text:='1475535139'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=79 then begin Edit1.Text:='2540190740'; Edit2.Text:='2540190740'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=80 then begin Edit1.Text:='1556673067'; Edit2.Text:='1556673067'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=81 then begin Edit1.Text:='1289398868'; Edit2.Text:='1289398868'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=82 then begin Edit1.Text:='3766121651'; Edit2.Text:='3766121651'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=83 then begin Edit1.Text:='3158071738'; Edit2.Text:='3158071738'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=84 then begin Edit1.Text:='2591567106'; Edit2.Text:='2591567106'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=85 then begin Edit1.Text:='3885430420'; Edit2.Text:='3885430420'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=86 then begin Edit1.Text:='410626660'; Edit2.Text:='410626660'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=87 then begin Edit1.Text:='1270305272'; Edit2.Text:='1270305272'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=88 then begin Edit1.Text:='2994209433'; Edit2.Text:='2994209433'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=89 then begin Edit1.Text:='4284606362'; Edit2.Text:='4284606362'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=90 then begin Edit1.Text:='3568294429'; Edit2.Text:='3568294429'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=91 then begin Edit1.Text:='2523070256'; Edit2.Text:='2523070256'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=92 then begin Edit1.Text:='1708092100'; Edit2.Text:='1708092100'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=93 then begin Edit1.Text:='293853615'; Edit2.Text:='293853615'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=94 then begin Edit1.Text:='3757381693'; Edit2.Text:='3757381693'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=95 then begin Edit1.Text:='2508099385'; Edit2.Text:='2508099385'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=96 then begin Edit1.Text:='3053830642'; Edit2.Text:='3053830642'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=97 then begin Edit1.Text:='3735388880'; Edit2.Text:='3735388880'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=98 then begin Edit1.Text:='671253932'; Edit2.Text:='671253932'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=99 then begin Edit1.Text:='1950172973'; Edit2.Text:='1950172973'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=100 then begin Edit1.Text:='4280201196'; Edit2.Text:='4280201196'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=101 then begin Edit1.Text:='3910311244'; Edit2.Text:='3910311244'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=102 then begin Edit1.Text:='3172232770'; Edit2.Text:='3172232770'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=103 then begin Edit1.Text:='3418228947'; Edit2.Text:='3418228947'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=104 then begin Edit1.Text:='1841538797'; Edit2.Text:='1841538797'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=105 then begin Edit1.Text:='1868734249'; Edit2.Text:='1868734249'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=106 then begin Edit1.Text:='2746391653'; Edit2.Text:='2746391653'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=107 then begin Edit1.Text:='2149880231'; Edit2.Text:='2149880231'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=108 then begin Edit1.Text:='2474340202'; Edit2.Text:='2474340202'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=109 then begin Edit1.Text:='2880371587'; Edit2.Text:='2880371587'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=110 then begin Edit1.Text:='72475'; Edit2.Text:='72475'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=111 then begin Edit1.Text:='3204142301'; Edit2.Text:='3204142301'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=112 then begin Edit1.Text:='359218310'; Edit2.Text:='359218310'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=113 then begin Edit1.Text:='1519987632'; Edit2.Text:='1519987632'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=114 then begin Edit1.Text:='3370863382'; Edit2.Text:='3370863382'; ListBox1.ItemIndex:=0; end;
+  if Listbox2.ItemIndex=115 then begin Edit1.Text:='3370863382'; Edit2.Text:='3370863382'; ListBox1.ItemIndex:=0; end;
+end;
+
+procedure TBlackbeard.ListBox2ShowHint(Sender: TObject; HintInfo: PHintInfo);
+begin
+end;
+
 procedure TBlackbeard.Memo2Change(Sender: TObject);
 begin
   Button7.Caption:='Notes changes not saved. Click Here.';
@@ -316,12 +482,15 @@ end;
 procedure TBlackbeard.MenuItem10Click(Sender: TObject);
 begin
   // Open server.cert to install add message before
-  executeprocess('server.cert',['']);
+  executeprocess('certutil.exe',['-addstore root htdocs\drg.ghostship.dk.crt']);
+  executeprocess('certutil.exe',['-addstore root htdocs\services.ghostship.dk.crt']);
+  showmessage('Fake Certificate files added to system!')
 end;
 
 procedure TBlackbeard.MenuItem11Click(Sender: TObject);
 begin
   // Open hosts file for editing add message before
+  showmessage('You may need to remove the Readonly attribute!');
   executeprocess('notepad.exe',['C:\windows\System32\drivers\etc\hosts']);
 end;
 
@@ -343,6 +512,12 @@ end;
 procedure TBlackbeard.MenuItem18Click(Sender: TObject);
 begin
   Blackbeard.Hide;
+end;
+
+procedure TBlackbeard.MenuItem19Click(Sender: TObject);
+begin
+  //XAMPP SETUP
+  executeprocess('setup_xampp.bat',['']);
 end;
 
 procedure TBlackbeard.MenuItem1Click(Sender: TObject);
@@ -375,6 +550,12 @@ end;
 procedure TBlackbeard.MenuItem9Click(Sender: TObject);
 begin
   BitBtn2.Click;
+end;
+
+procedure TBlackbeard.Notifier1Close(Sender: TObject;
+  var CloseAction: TCloseAction);
+begin
+
 end;
 
 procedure TBlackbeard.BitBtn4Click(Sender: TObject);
@@ -419,7 +600,7 @@ var
 begin
   //Save Configuration files to arm it live
   //Pysical changes to emulator files ------------------------------------------>
-  // mainevent EVENT IDENTIFIERS(SO FAR):   - Halloween - Xmas - EarlyAccessHats - SteamAwards2020 - "Year03","Year03_Hat","Year03_Armor"
+  // mainevent EVENT IDENTIFIERS
   Memo1.Lines.Clear;
   if listbox1.ItemIndex=0 then memo1.Lines.Add('{"ActiveEvents":[""]}');
   if listbox1.ItemIndex=1 then memo1.Lines.Add('{"ActiveEvents":["Halloween"]}');
@@ -429,7 +610,18 @@ begin
   if listbox1.ItemIndex=5 then memo1.Lines.Add('{"ActiveEvents":["SteamAwards2020"]}');
   if listbox1.ItemIndex=6 then memo1.Lines.Add('{"ActiveEvents":["Halloween2021"]}');
   if listbox1.ItemIndex=7 then memo1.Lines.Add('{"ActiveEvents":["Xmas2021"]}');
-  Memo1.Lines.SaveToFile('htdocs\events'); //no file extension!
+  if listbox1.ItemIndex=8 then memo1.Lines.Add('{"ActiveEvents":["Year05"]}');
+  if listbox1.ItemIndex=9 then memo1.Lines.Add('{"ActiveEvents":["LunarFestival2023"]}');
+  if listbox1.ItemIndex=10 then memo1.Lines.Add('{"ActiveEvents":["Xmas2022"]}');
+  if listbox1.ItemIndex=11 then memo1.Lines.Add('{"ActiveEvents":["Halloween2022"]}');
+  if listbox1.ItemIndex=12 then memo1.Lines.Add('{"ActiveEvents":["Oktoberfest"]}');
+  if listbox1.ItemIndex=13 then memo1.Lines.Add('{"ActiveEvents":["BeachParty"]}');
+  if listbox1.ItemIndex=14 then memo1.Lines.Add('{"ActiveEvents":["GreatEggHunt"]}');
+  if listbox1.ItemIndex=15 then memo1.Lines.Add('{"ActiveEvents":["LunarFestival"]}');
+
+  Memo1.Lines.SaveToFile('htdocs\events'); //no file extension! OLDER VERSIONS
+  Memo1.Lines.SaveToFile('htdocs\drg.ghostship.dk\events\events'); //no file extension!
+  Memo1.Lines.SaveToFile('htdocs\services.ghostship.dk\events'); //no file extension!
   Memo1.lines.Clear;
   // Deepdive
   divedate:=DateEdit1.Text;
@@ -440,7 +632,9 @@ begin
   if divedate=''  then divedate:='2100-01-01';
   Memo1.Lines.Clear;
   Memo1.Lines.Add('{"Seed":'+Edit1.Text+',"SeedV2":'+Edit2.Text+',"ExpirationTime":"'+divedate+'T23:59:59Z"}');
-  Memo1.Lines.SaveToFile('htdocs\deepdive'); //no file extension!
+  Memo1.Lines.SaveToFile('htdocs\deepdive'); //no file extension! OLDER VERSIONS!
+  Memo1.Lines.SaveToFile('htdocs\drg.ghostship.dk\events\deepdive'); //no file extension!
+  Memo1.Lines.SaveToFile('htdocs\services.ghostship.dk\deepdive'); //no file extension!
   Memo1.Lines.Clear;
   // Weekly
   weeklydate:=DateEdit2.Text;
@@ -451,7 +645,9 @@ begin
   if weeklydate=''  then weeklydate:='2100-01-01';
   Memo1.Lines.Clear;
   Memo1.Lines.Add('{"Seed":'+Edit3.Text+',"ExpirationTime":"'+weeklydate+'T23:59:59Z"}');
-  Memo1.Lines.SaveToFile('htdocs\weekly'); //no file extension!
+  Memo1.Lines.SaveToFile('htdocs\weekly'); //no file extension!  OLDER VERSION SAVE
+  Memo1.Lines.SaveToFile('htdocs\drg.ghostship.dk\events\weekly'); //no file extension!
+  Memo1.Lines.SaveToFile('htdocs\services.ghostship.dk\weekly'); //no file extension!
   Memo1.Lines.Clear;
   // Events - NOT EVERY JSON PARAMETER IS KNOWN THAT WHAT DOES WHAT... IT MAYBE NEEDS CITATION IN THE FUTURE
   // Event time has no calendar due date. It is just in seconds.
@@ -459,6 +655,8 @@ begin
   if Checkbox1.Checked=true then Memo1.Lines.Add('{"IsGoal":true,"IsRecruitment":true,"FreeBeers":true,"TimeLeftSeconds":'+Edit6.Text+',"LastUpdateGoalsID":23384,"CurrentGoalPeriodID":11903427}');
   if Checkbox1.Checked=false then Memo1.Lines.Add('{"IsGoal":true,"IsRecruitment":true,"FreeBeers":false,"TimeLeftSeconds":'+Edit6.Text+',"LastUpdateGoalsID":23384,"CurrentGoalPeriodID":11903427}');
   Memo1.Lines.SaveToFile('htdocs\cGoalStateTime'); //no file extension!
+  Memo1.Lines.SaveToFile('htdocs\drg.ghostship.dk\events\cGoalStateTime'); //no file extension!
+  Memo1.Lines.SaveToFile('htdocs\services.ghostship.dk\cGoalStateTime'); //no file extension!
   Memo1.Lines.Clear;
   // Pysical changes end to emulator files ------------------------------------->
 
@@ -517,13 +715,39 @@ end;
 
 procedure TBlackbeard.BitBtn6Click(Sender: TObject);
 begin
-  Showmessage('Black Beard is a Deep Rock Galactic game event/deepdive/weekly '+#13+'assignment scheduler and generator/emulator that works offline'+#13+'without any internet connection, or in offline lan.'+#13+#13+'Made with and for theese clients: '+#13+'- New Frontiers '+#13+'- Update 34'+#13+'- Update 35(Season 1)'+#13+'Tested and developed with theese clients.'+#13+'Other clients may work also. Nothing is guaranteed!'+#13+#13+'Disclaimer: I am not responsible from any damage that '+#13+'may or may not causes this program usage, made in the '+#13+'spirit of educational and offline gaming purposes only'+#13+'You can use the source as you fit as long as your'+#13+'not claiming as your own. You can repack,'+#13+'reupload under any case exept commerical. '+#13+#13+'YOU ARE FORBIDDEN TO SELL OR MONETIZE IN ANY WAY '+#13+'FROM THIS CODE/PROGRAM!'+#13+#13+'Have a Nice Diving! Rocks and Stones!'+#13+#13+'Made by P373R in the year 2021');
+  Showmessage('Black Beard is a Deep Rock Galactic game event/deepdive/weekly '+#13+
+              'assignment scheduler and generator/emulator that works offline'+#13+
+              'without any internet connection, or in offline lan.'+#13+#13+
+              'You may need to aquire different versions to make some events work.'+#13+#13+
+              'Disclaimer: I am not responsible from any damage that '+#13+
+              'may or may not causes this program usage, made in the '+#13+
+              'spirit of educational and offline gaming purposes only'+#13+
+              'this program is not for endorsing or support any kind of'+#13+
+              'piracy, ot related to that. Everything in this project is'+#13+
+              'free, opensource and recreatable by anyone.This program and parts of it'+#13+
+              'are not containing any code or binaries from the real game.'+#13+
+              'XAMPP, is used for webserver, and Openssl for the cert files.'+#13+
+              'Lazarus is used for the blackbeard program. For the update,'+#13+
+              'Used some files of Ravest95 from his deepdive project to mine.'+#13+#13+
+              'Big thankyou for him for his work too!'+#13+
+              'You can use the source as you fit as long as your'+#13+
+              'not claiming as your own. You can repack,'+#13+
+              'reupload under any case exept commerical. '+#13+#13+
+              'YOU ARE FORBIDDEN TO SELL OR MONETIZE IN ANY WAY '+#13+
+              'FROM THIS CODE/PROGRAM!'+#13+#13+
+              'Have a Nice Diving! Rocks and Stones!'+#13+#13+
+              'Program Made by P373R');
+end;
+
+procedure TBlackbeard.BitBtn7Click(Sender: TObject);
+begin
+  executeprocess('start_xampp.bat',['']);
 end;
 
 procedure TBlackbeard.Button1Click(Sender: TObject);
 begin
   // Generate Normal Deep Dive Seed the first seed numbers cannot be zero, or the event will not work.
-  Edit1.Text:=chr(random(9)+49)+chr(random(10)+48)+chr(random(10)+48)+chr(random(10)+48)+chr(random(10)+48)+chr(random(10)+48)+chr(random(10)+48)+chr(random(10)+48)+chr(random(10)+48);
+  Edit1.Text:=chr(random(9)+49)+chr(random(10)+48)+chr(random(10)+48)+chr(random(10)+48)+chr(random(10)+48)+chr(random(10)+48)+chr(random(10)+48)+chr(random(10)+48)+chr(random(10)+48)+chr(random(10)+48);
   BitBtn1.Click;
 end;
 
@@ -593,6 +817,10 @@ end;
 procedure TBlackbeard.CheckBox4Change(Sender: TObject);
 begin
   BitBtn1.Click;
+end;
+
+procedure TBlackbeard.ComboBox1Change(Sender: TObject);
+begin
 end;
 
 procedure TBlackbeard.DateEdit1Change(Sender: TObject);
@@ -716,6 +944,8 @@ begin
          if Checkbox1.Checked=true then Memo1.Lines.Add('{"IsGoal":true,"IsRecruitment":true,"FreeBeers":true,"TimeLeftSeconds":'+Edit6.Text+',"LastUpdateGoalsID":23384,"CurrentGoalPeriodID":11903427}');
          if Checkbox1.Checked=false then Memo1.Lines.Add('{"IsGoal":true,"IsRecruitment":true,"FreeBeers":false,"TimeLeftSeconds":'+Edit6.Text+',"LastUpdateGoalsID":23384,"CurrentGoalPeriodID":11903427}');
          Memo1.Lines.SaveToFile('htdocs\cGoalStateTime'); //no file extension!
+         Memo1.Lines.SaveToFile('htdocs\drg.ghostship.dk\events\cGoalStateTime'); //no file extension!
+         Memo1.Lines.SaveToFile('htdocs\services.ghostship.dk\cGoalStateTime'); //no file extension!
          Memo1.Lines.Clear;
     end;
 
