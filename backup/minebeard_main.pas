@@ -321,6 +321,7 @@ Memo2.Lines.LoadFromFile('notes.txt');
   if inivalue='false' then
    begin
      checkbox4.checked:=false;
+     TrayIcon1.Hide;
    end;
 
   if inivalue='true' then
@@ -328,6 +329,7 @@ Memo2.Lines.LoadFromFile('notes.txt');
      checkbox4.checked:=true;
      // Blackbeard.WindowState:=wsMinimized;
      Application.ShowMainForm:=False;
+     TrayIcon1.Show;
    end;
   Sett.Free;
  // INI SECTION END ------------------------------------------------------------->
@@ -338,7 +340,7 @@ begin
   // Check if it is going to taskbar or tray.
   if CheckBox4.Checked=true then
     Begin
-     if Blackbeard.WindowState = wsMinimized then Blackbeard.Hide;
+     if Blackbeard.WindowState = wsMinimized then begin Blackbeard.Hide; TrayIcon1.Show; end;
     end;
 end;
 
@@ -512,6 +514,7 @@ end;
 procedure TBlackbeard.MenuItem18Click(Sender: TObject);
 begin
   Blackbeard.Hide;
+  TrayIcon1.Show;
 end;
 
 procedure TBlackbeard.MenuItem19Click(Sender: TObject);
@@ -524,12 +527,14 @@ procedure TBlackbeard.MenuItem1Click(Sender: TObject);
 begin
     Blackbeard.WindowState:=wsNormal;
     Blackbeard.Show;
+    TrayIcon1.Hide;
 end;
 
 procedure TBlackbeard.MenuItem2Click(Sender: TObject);
 begin
 //  Blackbeard.WindowState:=wsMinimized;
     Blackbeard.Hide;
+    TrayIcon1.Show;
 end;
 
 procedure TBlackbeard.MenuItem3Click(Sender: TObject);
@@ -997,12 +1002,13 @@ end;
 
 procedure TBlackbeard.Trayicon1Click(Sender: TObject);
 begin
-
+  //When clickin on icon
 end;
 
 procedure TBlackbeard.Trayicon1DblClick(Sender: TObject);
 begin
   Menuitem1.Click;
+  TrayIcon1.Hide;
 end;
 
 end.

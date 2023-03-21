@@ -21,8 +21,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="920"/>
-        <CursorPos X="32" Y="948"/>
+        <TopLine Value="313"/>
+        <CursorPos Y="324"/>
         <UsageCount Value="57"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -43,123 +43,127 @@
         <UsageCount Value="10"/>
       </Unit3>
     </Units>
-    <JumpHistory Count="29" HistoryIndex="28">
+    <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="648" Column="37" TopLine="621"/>
+        <Caret Line="825" Column="23" TopLine="797"/>
       </Position1>
       <Position2>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="649" Column="34" TopLine="622"/>
+        <Caret Line="829" Column="23" TopLine="801"/>
       </Position2>
       <Position3>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="650" Column="34" TopLine="623"/>
+        <Caret Line="838" Column="23" TopLine="810"/>
       </Position3>
       <Position4>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="657" Column="36" TopLine="630"/>
+        <Caret Line="846" Column="23" TopLine="818"/>
       </Position4>
       <Position5>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="658" Column="34" TopLine="631"/>
+        <Caret Line="854" Column="23" TopLine="826"/>
       </Position5>
       <Position6>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="659" Column="34" TopLine="632"/>
+        <Caret Line="860" Column="23" TopLine="832"/>
       </Position6>
       <Position7>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="946" Column="43" TopLine="918"/>
+        <Caret Line="865" Column="23" TopLine="837"/>
       </Position7>
       <Position8>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="947" Column="41" TopLine="919"/>
+        <Caret Line="870" Column="23" TopLine="842"/>
       </Position8>
       <Position9>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="930" Column="30" TopLine="920"/>
+        <Caret Line="875" Column="23" TopLine="847"/>
       </Position9>
       <Position10>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="946" Column="34" TopLine="926"/>
+        <Caret Line="880" Column="23" TopLine="852"/>
       </Position10>
       <Position11>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="947" Column="32" TopLine="926"/>
+        <Caret Line="885" Column="23" TopLine="857"/>
       </Position11>
       <Position12>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="5" Column="31"/>
+        <Caret Line="890" Column="23" TopLine="862"/>
       </Position12>
       <Position13>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="246" Column="25" TopLine="228"/>
+        <Caret Line="895" Column="23" TopLine="867"/>
       </Position13>
       <Position14>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="622" Column="28" TopLine="604"/>
+        <Caret Line="900" Column="23" TopLine="872"/>
       </Position14>
       <Position15>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="623" Column="25" TopLine="604"/>
+        <Caret Line="905" Column="23" TopLine="877"/>
       </Position15>
       <Position16>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="624" Column="25" TopLine="604"/>
+        <Caret Line="910" Column="23" TopLine="882"/>
       </Position16>
       <Position17>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="635" Column="27" TopLine="620"/>
+        <Caret Line="915" Column="23" TopLine="887"/>
       </Position17>
       <Position18>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="636" Column="25" TopLine="620"/>
+        <Caret Line="920" Column="23" TopLine="892"/>
       </Position18>
       <Position19>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="637" Column="25" TopLine="620"/>
+        <Caret Line="925" Column="23" TopLine="897"/>
       </Position19>
       <Position20>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="648" Column="28" TopLine="636"/>
+        <Caret Line="930" Column="23" TopLine="902"/>
       </Position20>
       <Position21>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="649" Column="25" TopLine="636"/>
+        <Caret Line="1003" Column="8" TopLine="978"/>
       </Position21>
       <Position22>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="650" Column="25" TopLine="636"/>
+        <Caret Line="209" Column="23" TopLine="192"/>
       </Position22>
       <Position23>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="657" Column="27" TopLine="636"/>
+        <Caret Line="341" Column="88" TopLine="313"/>
       </Position23>
       <Position24>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="658" Column="25" TopLine="636"/>
+        <Caret Line="515" Column="17" TopLine="487"/>
       </Position24>
       <Position25>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="659" Column="25" TopLine="636"/>
+        <Caret Line="516" Column="17" TopLine="500"/>
       </Position25>
       <Position26>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="797" Column="25" TopLine="784"/>
+        <Caret Line="528" Column="19" TopLine="500"/>
       </Position26>
       <Position27>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="924" Column="24" TopLine="899"/>
+        <Caret Line="535" Column="19" TopLine="507"/>
       </Position27>
       <Position28>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="946" Column="34" TopLine="918"/>
+        <Caret Line="60" Column="17" TopLine="37"/>
       </Position28>
       <Position29>
         <Filename Value="minebeard_main.pas"/>
-        <Caret Line="947" Column="32" TopLine="919"/>
+        <Caret Line="341" Column="88" TopLine="313"/>
       </Position29>
+      <Position30>
+        <Filename Value="minebeard_main.pas"/>
+        <Caret Line="515" Column="17" TopLine="487"/>
+      </Position30>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
