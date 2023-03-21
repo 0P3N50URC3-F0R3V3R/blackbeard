@@ -1,7 +1,7 @@
 # BlackBeard Event Emulator
-This is an OpenSource project for the game DEEP ROCK GALACTIC It is in RC1 state, but useable.
+This is an OpenSource project for the game 
+DEEP ROCK GALACTIC - DEEPDIVE, ASSIGNMENT AND EVENT EMULATOR
 
-As of now, the maximal supported client version(That i designed with it) is 1.37.81454.0 And older versions. To Aquire those you need to have the original game and download from steam manifests manually thru SteamCMD. You have to solve it yourself that part.
 
 Currently Supported platform: Windows, or linux(Tested on Raspberry Buster, debian and ubuntu) only. You need to compile it yourself though.
 For the linux it does not need any big deal it will work on any pascal compiler and on an apache2 server(you need to add the fake cert manually though)
@@ -25,7 +25,7 @@ since the game does not allow you to play offline assigments/dives if you dont h
 - Free beer events, ect ect.
 - Main Events like Halloween Xmas, ect
 
-#NOT ALL EVENTS WORKING WITH THE LATEST VERSION CLIENTS, - ESPECIALLY FOR OLDER EVENTS - YOU WILL NEED TO GET OLDER CLIENT VERSIONS FROM STEAM MANIFESTS!! NOT WORKING WITH ALL, BLACKBEARD IS UNIVERSAL IN THIS MANNER.
+#NOT ALL EVENTS WORKING WITH THE LATEST VERSION FOR SOME EVENTS, - ESPECIALLY FOR OLDER ONES - YOU WILL NEED TO GET OLDER CLIENT VERSIONS FROM STEAM MANIFESTS!! NOT WORKING WITH ALL, BLACKBEARD IS UNIVERSAL IN THIS MANNER.
 
 # Here is what is not working yet:
 - Community part is not working yet. It might never will.
@@ -38,7 +38,7 @@ since the game does not allow you to play offline assigments/dives if you dont h
 - ALWAYS START THE BLACKBEARD PROGRAM WITH SYSTEM ADMIN RIGHTS IN WINDOWS! OTHERWISE THE PROGRAM WONT BE ABLE TO SAVE/WRITE ON YOUR DISK YOUR FILE!
 - YOU NEED TO SET THE DATE TO YOURSELF! The program wont select to you new dates.
 
-# WARNING! IF YOU HAVE ACTIVE WINDOWS DEFENDER YOU NEED TO EDIT THE HOSTS FILE MANUALLY!!!! IT WONT WORK FROM THE PROGRAM! FROM BLACKBEARD ONLY WORKS WITH DISABLED OR WHITELISTED WINDOWS DEFENDER!(Otherwise the program will say that the hosts file folder does not exists. Even in admin mode.)
+# WARNING! IF YOU HAVE ACTIVE WINDOWS DEFENDER YOU NEED TO EDIT THE HOSTS FILE MANUALLY!!!! IT WONT WORK FROM THE PROGRAM! FROM BLACKBEARD ONLY WORKS WITH DISABLED WINDOWS DEFENDER!
 
 # Here is how to use this tool:
 
@@ -66,8 +66,6 @@ If you get a red message on the deep dive panels, you need to add the cert file 
 This program is written entire in Lazarus IDE and not using ANY code from the original game, its just a tool. This code is perfectly legal undrt the GPL license!
 
 With the usage, you are accepting that i am *not* responsible for any harm that comes to your account or freetime or any thing that comes from using this program. In theory this is perfectly safe to use, but i am not responsible for your mistakes. If you have doubt of this then do not use it. This is for Strictly educational purposes and thats it.
-
-THANK YOU FOR Ravest95 for his contributions!
 
 Rocks and Stones!
 The webserver uses "443" and "8443" ports. it might be occupied so it is up to you what is using it if you cannot start apache, sorry.
