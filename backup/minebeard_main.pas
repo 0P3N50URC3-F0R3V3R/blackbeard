@@ -7,8 +7,9 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
   ComCtrls, Buttons, Menus, PopupNotifier, Arrow, EditBtn, ActnList, CheckLst,
-  DateTimePicker, TAGraph, TASeries, TAIntervalSources, TASources, TAStyles,
-  ExtendedNotebook, IniFiles, winutils, DateUtils;
+  ColorBox, ValEdit, Grids, DateTimePicker, TAGraph, TASeries,
+  TAIntervalSources, TASources, TAStyles, ExtendedNotebook, IniFiles, winutils,
+  DateUtils;
 
 const
   IniFile = 'setup.ini';
@@ -40,6 +41,7 @@ type
     CheckBox3: TCheckBox;
     CheckBox4: TCheckBox;
     CheckBox5: TCheckBox;
+    CheckBox6: TCheckBox;
     CheckGroup1: TCheckGroup;
     DateEdit1: TDateEdit;
     DateEdit2: TDateEdit;
@@ -60,6 +62,7 @@ type
     GroupBox4: TGroupBox;
     GroupBox5: TGroupBox;
     GroupBox6: TGroupBox;
+    NotesBox: TGroupBox;
     Label1: TLabel;
     Label10: TLabel;
     Label11: TLabel;
@@ -67,19 +70,15 @@ type
     Label13: TLabel;
     Label14: TLabel;
     Label15: TLabel;
-    Label16: TLabel;
     Label17: TLabel;
     Label18: TLabel;
     Label19: TLabel;
     Label2: TLabel;
     Label20: TLabel;
-    Label21: TLabel;
-    Label22: TLabel;
     Label23: TLabel;
     Label25: TLabel;
     Label26: TLabel;
     Label27: TLabel;
-    Label28: TLabel;
     Label29: TLabel;
     Label3: TLabel;
     Label4: TLabel;
@@ -118,6 +117,7 @@ type
     TabSheet2: TTabSheet;
     TabSheet3: TTabSheet;
     TabSheet4: TTabSheet;
+    TabSheet5: TTabSheet;
     TabSheet7: TTabSheet;
     Traymenu: TPopupMenu;
     Trayicon1: TTrayIcon;
@@ -143,6 +143,7 @@ type
     procedure CheckBox2Change(Sender: TObject);
     procedure CheckBox3Change(Sender: TObject);
     procedure CheckBox4Change(Sender: TObject);
+    procedure CheckBox5Change(Sender: TObject);
     procedure ComboBox1Change(Sender: TObject);
     procedure DateEdit1Change(Sender: TObject);
     procedure DateEdit2Change(Sender: TObject);
@@ -217,6 +218,15 @@ begin
 // Set the default main page
 PageControl1.TabIndex:=0;
 Tabsheet1.Color:= TColor($000BD7D1);
+
+// Color the Listbox item with Deepdives.
+ListBox2.ItemIndex := 0;
+ListBox2.Canvas.Brush.Color := TColor($0000AA00); // háttér
+ListBox2.Canvas.Font.Color := TColor($00FFFFFF); // szöveg
+ListBox2.Canvas.FillRect(ListBox2.ItemRect(1)); // szín beállítása per sor
+ListBox2.Invalidate; // Újrarajzolás
+ListBox2.ItemIndex := 1;
+
 
 //Other checks with the program:
 // XAMPP runs?
@@ -318,10 +328,10 @@ Memo2.Lines.LoadFromFile('notes.txt');
 
   // start minimized setup   - Needs further tweak, adding minimize effect
   inivalue:= Sett.ReadString('Blackbeard','startmin','false');
+  TrayIcon1.Hide;
   if inivalue='false' then
    begin
      checkbox4.checked:=false;
-     TrayIcon1.Hide;
    end;
 
   if inivalue='true' then
@@ -824,6 +834,11 @@ begin
   BitBtn1.Click;
 end;
 
+procedure TBlackbeard.CheckBox5Change(Sender: TObject);
+begin
+
+end;
+
 procedure TBlackbeard.ComboBox1Change(Sender: TObject);
 begin
 end;
@@ -979,10 +994,11 @@ begin
      end;
 
     // Is it a random main event? or just turn off event?
+    // Updated to latest. 15 Events.
     if Checkbox5.Checked=true then
        begin
           Randomize;
-          mainrandom:=random(7);
+          mainrandom:=random(15);
           if mainrandom=0 then Listbox1.ItemIndex:=0;
           if mainrandom=1 then Listbox1.ItemIndex:=1;
           if mainrandom=2 then Listbox1.ItemIndex:=2;
@@ -990,6 +1006,15 @@ begin
           if mainrandom=4 then Listbox1.ItemIndex:=4;
           if mainrandom=5 then Listbox1.ItemIndex:=5;
           if mainrandom=6 then Listbox1.ItemIndex:=6;
+          if mainrandom=7 then Listbox1.ItemIndex:=7;
+          if mainrandom=8 then Listbox1.ItemIndex:=8;
+          if mainrandom=9 then Listbox1.ItemIndex:=9;
+          if mainrandom=10 then Listbox1.ItemIndex:=10;
+          if mainrandom=11 then Listbox1.ItemIndex:=11;
+          if mainrandom=12 then Listbox1.ItemIndex:=12;
+          if mainrandom=13 then Listbox1.ItemIndex:=13;
+          if mainrandom=14 then Listbox1.ItemIndex:=14;
+          if mainrandom=15 then Listbox1.ItemIndex:=15;
        end;
 
   end;
